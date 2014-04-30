@@ -3,4 +3,4 @@ drugwars
 
 SHHS Coding Club group project
 
-Cash rules everything around me
+clare rules everything around me
