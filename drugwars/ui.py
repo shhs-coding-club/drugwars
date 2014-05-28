@@ -97,6 +97,7 @@ def title_screen():
     creds = """
     From the Sleepy Hollow High School Coding Club!
     Presidents: Colin Atkinson, Katie Brennan
+    Treasurer: Ass man
     Advisor: Daniel Larkin
     https://github.com/colatkinson/drugwars"""
     clear()
