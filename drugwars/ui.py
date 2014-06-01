@@ -1,20 +1,20 @@
-def getTerminalSize():
+def get_terminal_size():
     """This function decides what method to call to get the screen size.
     src: http://stackoverflow.com/questions/566746/how-to-get-console-window-width-in-python"""
     import platform
     current_os = platform.system()
     tuple_xy=None
     if current_os == 'Windows':
-        tuple_xy = _getTerminalSize_windows()
+        tuple_xy = _get_terminal_size_windows()
         if tuple_xy is None:
-            tuple_xy = _getTerminalSize_tput()
+            tuple_xy = _get_terminal_size_tput()
     if current_os == 'Linux' or current_os == 'Darwin' or  current_os.startswith('CYGWIN'):
-        tuple_xy = _getTerminalSize_linux()
+        tuple_xy = _get_terminal_size_linux()
     if tuple_xy is None:
         tuple_xy = (80, 25)      # default value
     return tuple_xy
 
-def _getTerminalSize_windows():
+def _get_terminal_size_windows():
     """Get Windows terminal size"""
     res=None
     try:
@@ -39,7 +39,7 @@ def _getTerminalSize_windows():
     else:
         return None
 
-def _getTerminalSize_tput():
+def _get_terminal_size_tput():
     """Backup method for Windows
     src: http://stackoverflow.com/questions/263890/how-do-i-find-the-width-height-of-a-terminal-window"""
     try:
@@ -54,7 +54,7 @@ def _getTerminalSize_tput():
     except:
         return None
 
-def _getTerminalSize_linux():
+def _get_terminal_size_linux():
     """Terminal size detection for Linux"""
     def ioctl_GWINSZ(fd):
         try:
@@ -80,7 +80,7 @@ def _getTerminalSize_linux():
 
 def clear():
     """Python has no good way of doing this, so fuck it, have some sketti code"""
-    w,h = getTerminalSize()
+    w,h = get_terminal_size()
     print("\n"*(2*h))
 
 def title_screen():
@@ -100,7 +100,7 @@ def title_screen():
     Advisor: Daniel Larkin
     https://github.com/colatkinson/drugwars"""
     clear()
-    w,h = getTerminalSize()
+    w,h = get_terminal_size()
     count = logo.count("\n") + creds.count("\n")
     print(logo)
     print(creds)
