@@ -32,6 +32,7 @@ setup(
                  'drugwars'},
     include_package_data=True,
     install_requires=[
+        "setuptools"
     ],
     license="BSD",
     zip_safe=False,
@@ -49,4 +50,5 @@ setup(
     ],
     test_suite='tests',
     scripts=['bin/drugwars'],
+    #data_files=[('', ['drugwars/media'])]
 )

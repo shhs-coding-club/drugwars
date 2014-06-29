@@ -99,6 +99,7 @@ def title_screen():
     Presidents: Colin Atkinson, Katie Brennan
     Advisor: Daniel Larkin
     https://github.com/colatkinson/drugwars"""
+    
     clear()
     w,h = get_terminal_size()
     count = logo.count("\n") + creds.count("\n")
