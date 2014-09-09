@@ -9,5 +9,5 @@ The aim of this project is to create a clone of the text-only DOS game [Drugwars
 
 To contribute, feel free to fork and submit a pull request!
 
-For information, contact me or [@katiebrennan](https://github.com/katiebrennan).
+For information, contact [@colatkinson](https://github.com/colatkinson) or [@katiebrennan](https://github.com/katiebrennan).
 
