@@ -1,3 +1,5 @@
+package com.tufsd.drugwars;
+
 
 /**
  * Write a description of class Player here.
