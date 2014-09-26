@@ -46,3 +46,7 @@ docs/_build
 *.class
 target
 *~
+
+# BlueJ
+*.ctxt
+*.bluej
