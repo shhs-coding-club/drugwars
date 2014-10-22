@@ -10,7 +10,7 @@ package com.tufsd.drugwars;
 public class Player
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private int y;
 
     /**
      * Constructor for objects of class Player
@@ -18,7 +18,7 @@ public class Player
     public Player()
     {
         // initialise instance variables
-        x = 0;
+        y = 0;
         
         //Inv:
         
@@ -54,6 +54,6 @@ public class Player
     public int sampleMethod(int y)
     {
         // put your code here
-        return x + y;
+        return y + y;
     }
 }
