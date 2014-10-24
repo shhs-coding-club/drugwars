@@ -55,20 +55,23 @@ public class UI
      */
     public static void startScreen ()
     {
-        System.out.println ("Press 1 to begin new game");
+        String[] opts = {"New Game", "Quit"};
+        String select = menuGen(opts);
+        
+        /*System.out.println ("Press 1 to begin new game");
         
         System.out.println ("Press 2 to quit");
         
         Scanner menuScanner = new Scanner (System.in);
         int menuChoice;
-        menuChoice = menuScanner.nextInt();
+        menuChoice = menuScanner.nextInt();*/
         
-        System.out.println (menuChoice);
-        if (menuChoice == 1)
+        System.out.println (select);
+        if (select == "New Game")
         {
             dummyFunction();
         }
-        else if (menuChoice == 2)
+        else if (select == "Quit") 
         {
             System.exit(0);
         }
@@ -78,5 +81,18 @@ public class UI
             System.exit(0);
         }
     }
+    public static String menuGen (String[] opts)
+    {
+        Scanner menuScanner = new Scanner (System.in);
+        int menuChoice;
         
+        for (int i = 0; i < opts.length; i++)
+        {
+            System.out.println((i+1)+". "+opts[i]);
+        }
+        
+        menuChoice = menuScanner.nextInt();
+        
+        return opts[menuChoice-1];
+    }
 }
