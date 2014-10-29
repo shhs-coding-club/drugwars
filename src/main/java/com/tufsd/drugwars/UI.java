@@ -48,6 +48,12 @@ public class UI
         System.out.println ("dummyFunction execute");
     }
     
+    public static void initText()
+    {
+        System.out.println ("You owe $100,000 to a loan shark. You've got 30 days to earn it back by selling drugs. Start now.");
+       
+    }
+    
     /**
      * ---------------------------------------------------------------------------------------
      * Function startScreen sends command for 1 and 2 to begin new game or quit, respectively
@@ -67,11 +73,11 @@ public class UI
         menuChoice = menuScanner.nextInt();*/
         
         System.out.println (select);
-        if (select == "New Game")
+        if (select.equals("New Game"))
         {
-            dummyFunction();
+           initText();
         }
-        else if (select == "Quit") 
+        else if (select.equals("Quit") )
         {
             System.exit(0);
         }
