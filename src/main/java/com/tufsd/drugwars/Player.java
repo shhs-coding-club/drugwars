@@ -15,22 +15,17 @@ public class Player
     /**
      * Constructor for objects of class Player
      */
-    public Player()
+    public int[] inventory;
+    public String name;
+   
+    public Player(String nameIn, int[] inventoryIn)
     {
         // initialise instance variables
         y = 0;
-        
+        name = nameIn;
+        inventory = inventoryIn;
         //Inv:
-        
-        int money = 250;
-        int ammo = 18;
-        int beer = 0;
-        int pot = 0;
-        int coke = 0;
-        int meth = 0;
-        int bong = 0;
-        int lighter = 0;
-        
+       
         //stats
         
         int health = 100; //it's health, what do you think
