@@ -36,7 +36,7 @@ public class Player
         int health = 100; //it's health, what do you think
         int dunkness = 0; //the more you drink, the higher it is
         int highness = 0; //you know what it is
-        int stanima = 100; //how long you run
+        int stamina = 100; //how long you run
         int tiredness = 10; //get sleep
         
         //Goals
