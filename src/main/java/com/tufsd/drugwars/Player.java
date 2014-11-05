@@ -4,8 +4,8 @@ package com.tufsd.drugwars;
 /**
  * Write a description of class Player here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author SHHS Coding Club Game Logic Team
+ * @version 20141105
  */
 public class Player
 {
@@ -15,21 +15,20 @@ public class Player
     /**
      * Constructor for objects of class Player
      */
-    public int[] inventory;
+    public Drug[] inventory;
     public String name;
    
-    public Player(String nameIn, int[] inventoryIn)
+    public Player(String nameIn)
     {
         // initialise instance variables
         y = 0;
         name = nameIn;
-        inventory = inventoryIn;
         //Inv:
        
         //stats
         
         int health = 100; //it's health, what do you think
-        int dunkness = 0; //the more you drink, the higher it is
+        int drunkness = 0; //the more you drink, the higher it is
         int highness = 0; //you know what it is
         int stamina = 100; //how long you run
         int tiredness = 10; //get sleep
@@ -38,17 +37,5 @@ public class Player
 
         int days = 31; //days until the loan shark comes
         int bounty = 0; //illigal things = bigger bounty
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return y + y;
     }
 }

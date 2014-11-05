@@ -38,19 +38,12 @@ public class UI
         scanner.nextLine();
         startScreen();
     }
-    /**
-     * -------------------------------------------------------------
-     * Function dummyFunction serves as placehold for future coding
-     * -------------------------------------------------------------
-     */
-    public static void dummyFunction()
-    {
-        System.out.println ("dummyFunction execute");
-    }
     
     public static void initText()
     {
         System.out.println ("You owe $100,000 to a loan shark. You've got 30 days to earn it back by selling drugs. Start now.");
+        Game game = new Game("John Welch");
+        game.run();
        
     }
     
