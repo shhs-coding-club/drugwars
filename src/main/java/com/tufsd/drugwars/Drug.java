@@ -14,6 +14,7 @@ public class Drug
     public double basePrice;
     /**
      * Constructor for objects of class Drug
+     * @param 
      */
     public Drug(String nameVar, double basePriceVar)
     {

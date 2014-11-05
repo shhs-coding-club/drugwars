@@ -3,17 +3,17 @@ import java.util.Scanner;
 
 
 /** 
- * Drug Wars interface made by Drug Lords Abigail, Amanda, Daniel, Dong Kyu, Jack, Jason (Team BADASSNESS!!!!!!)
- * ----------------------------------------------------------
- * UI method implements introduction splashscreen badassness
- * ----------------------------------------------------------
+ * Drug Wars interface
+ * @author Drug Lords Abigail, Amanda, Daniel, Dong Kyu, Jack, Jason (Team BADASSNESS!!!!!!)
+ * 
+ * 
  */
 public class UI
 {
     /**
-     * ------------------------------------------
+     * 
      * Function splashcreen shows Drug Wars logo
-     * ------------------------------------------
+     * @operand startscreen this starts the game
      */
      public static void splashscreen()
     {   
@@ -38,26 +38,19 @@ public class UI
         scanner.nextLine();
         startScreen();
     }
-    /**
-     * -------------------------------------------------------------
-     * Function dummyFunction serves as placehold for future coding
-     * -------------------------------------------------------------
-     */
-    public static void dummyFunction()
-    {
-        System.out.println ("dummyFunction execute");
-    }
     
     public static void initText()
     {
         System.out.println ("You owe $100,000 to a loan shark. You've got 30 days to earn it back by selling drugs. Start now.");
+        Game game = new Game("John Welch");
+        game.run();
        
     }
     
     /**
-     * ---------------------------------------------------------------------------------------
+     *
      * Function startScreen sends command for 1 and 2 to begin new game or quit, respectively
-     * ---------------------------------------------------------------------------------------
+     * this lets the user decide if they want to start
      */
     public static void startScreen ()
     {

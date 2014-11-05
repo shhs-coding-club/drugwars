@@ -4,8 +4,8 @@ package com.tufsd.drugwars;
 /**
  * location class
  * 
- * Aaron 
- * 10-29-14
+ * @author Aaron 
+ * @version 10-29-14
  */
 public class Location
 {
