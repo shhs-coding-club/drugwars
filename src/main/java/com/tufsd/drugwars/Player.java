@@ -12,12 +12,14 @@ public class Player
     // instance variables - replace the example below with your own
     private int y;
 
-    /**
-     * Constructor for objects of class Player
-     */
+   
     public Drug[] inventory;
     public String name;
    
+    /**
+     * Constructor for objects of class Player
+     * 
+     */
     public Player(String nameIn)
     {
         // initialise instance variables

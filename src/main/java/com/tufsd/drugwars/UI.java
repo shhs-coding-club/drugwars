@@ -3,17 +3,17 @@ import java.util.Scanner;
 
 
 /** 
- * Drug Wars interface made by Drug Lords Abigail, Amanda, Daniel, Dong Kyu, Jack, Jason (Team BADASSNESS!!!!!!)
- * ----------------------------------------------------------
- * UI method implements introduction splashscreen badassness
- * ----------------------------------------------------------
+ * Drug Wars interface
+ * @author Drug Lords Abigail, Amanda, Daniel, Dong Kyu, Jack, Jason (Team BADASSNESS!!!!!!)
+ * 
+ * 
  */
 public class UI
 {
     /**
-     * ------------------------------------------
+     * 
      * Function splashcreen shows Drug Wars logo
-     * ------------------------------------------
+     * @operand startscreen this starts the game
      */
      public static void splashscreen()
     {   
@@ -48,9 +48,9 @@ public class UI
     }
     
     /**
-     * ---------------------------------------------------------------------------------------
+     *
      * Function startScreen sends command for 1 and 2 to begin new game or quit, respectively
-     * ---------------------------------------------------------------------------------------
+     * this lets the user decide if they want to start
      */
     public static void startScreen ()
     {
