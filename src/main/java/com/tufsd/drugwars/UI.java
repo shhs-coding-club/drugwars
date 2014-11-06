@@ -11,9 +11,7 @@ import java.util.Scanner;
 public class UI
 {
     /**
-     * 
-     * Function splashcreen shows Drug Wars logo
-     * @operand startscreen this starts the game
+     * Shows the Drug Wars logo and waits for the user to press enter.
      */
      public static void splashscreen()
     {   
@@ -39,18 +37,18 @@ public class UI
         startScreen();
     }
     
+    /**
+     * Shows the initial text and initializes and runs a new Game.
+     */
     public static void initText()
     {
         System.out.println ("You owe $100,000 to a loan shark. You've got 30 days to earn it back by selling drugs. Start now.");
         Game game = new Game("John Welch");
-        game.run();
-       
+        game.run();  
     }
     
     /**
-     *
-     * Function startScreen sends command for 1 and 2 to begin new game or quit, respectively
-     * this lets the user decide if they want to start
+     * Lets the user decide if they want to start a new game or quit.
      */
     public static void startScreen ()
     {
@@ -80,6 +78,13 @@ public class UI
             System.exit(0);
         }
     }
+
+    /**
+     * Generates a menu for uesrs from an array.
+     *
+     * @param opts an array of Strings containing menu options
+     * @return the string value of the selected menu option
+     */
     public static String menuGen (String[] opts)
     {
         Scanner menuScanner = new Scanner (System.in);

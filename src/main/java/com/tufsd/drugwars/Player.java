@@ -1,43 +1,46 @@
 package com.tufsd.drugwars;
 
+import java.util.HashMap;
 
 /**
- * Write a description of class Player here.
+ * A class to represent players.
  * 
  * @author SHHS Coding Club Game Logic Team
  * @version 20141105
  */
 public class Player
 {
-    // instance variables - replace the example below with your own
-    private int y;
-
-   
-    public Drug[] inventory;
+    /**
+     * The player's inventory with drug names as keys and count as values.
+     */
+    public HashMap inventory;
+    
+    /**
+     * The player's name.
+     */
     public String name;
+    
+    /**
+     * The player's health (initial value of 100).
+     */
+    public int health = 100;
    
     /**
      * Constructor for objects of class Player
      * 
      */
-    public Player(String nameIn)
+    public Player(String name)
     {
-        // initialise instance variables
-        y = 0;
-        name = nameIn;
+        this.name = name;
         //Inv:
        
         //stats
         
-        int health = 100; //it's health, what do you think
         int drunkness = 0; //the more you drink, the higher it is
         int highness = 0; //you know what it is
         int stamina = 100; //how long you run
         int tiredness = 10; //get sleep
         
-        //Goals
-
-        int days = 31; //days until the loan shark comes
-        int bounty = 0; //illigal things = bigger bounty
+        int bounty = 0; //illegal things = bigger bounty
     }
 }
