@@ -50,3 +50,6 @@ target
 # BlueJ
 *.ctxt
 *.bluej
+
+# Javadoc
+doc

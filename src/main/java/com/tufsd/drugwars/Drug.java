@@ -3,8 +3,8 @@ package com.tufsd.drugwars;
 
 /**
  * Class to provide a template for the various drugs
- * 
- * @author Luke & Caleb 
+ *
+ * @author Luke & Caleb
  * @version 10/22/14
  */
 public class Drug
@@ -14,12 +14,13 @@ public class Drug
     public double basePrice;
     /**
      * Constructor for objects of class Drug
-     * @param 
+     * @param name      name of the drug
+     * @param basePrice the base price of the drug
      */
-    public Drug(String nameVar, double basePriceVar)
+    public Drug(String name, double basePrice)
     {
         // initialise instance variables
-        name = nameVar;
-        basePrice = basePriceVar;
+        this.name = name;
+        this.basePrice = basePrice;
     }
 }

@@ -3,7 +3,7 @@ package com.tufsd.drugwars;
 
 /**
  * A class to represent a game session.
- * 
+ *
  * @author SHHS Coding Club
  * @version 20141105
  */
@@ -18,7 +18,7 @@ public class Game
         // initialise instance variables
         player = new Player(name);
     }
-    
+
     public void run()
     {
         System.out.println(player.name);
