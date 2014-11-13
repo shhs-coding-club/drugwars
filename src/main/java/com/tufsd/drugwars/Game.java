@@ -21,6 +21,6 @@ public class Game
 
     public void run()
     {
-        System.out.println(player.name);
+        UI.playerInfo(player);
     }
 }

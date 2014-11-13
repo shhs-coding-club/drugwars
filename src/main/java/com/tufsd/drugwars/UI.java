@@ -42,8 +42,12 @@ public class UI
      */
     public static void initText()
     {
+        String name;
+        Scanner scan = new Scanner(System.in);
         System.out.println ("You owe $100,000 to a loan shark. You've got 30 days to earn it back by selling drugs. Start now.");
-        Game game = new Game("John Welch");
+        System.out.print("What is your name?: ");
+        name = scan.nextLine();
+        Game game = new Game(name);
         game.run();
     }
 
@@ -98,5 +102,11 @@ public class UI
         menuChoice = menuScanner.nextInt();
 
         return opts[menuChoice-1];
+    }
+    
+    public static void playerInfo(Player player)
+    {
+        System.out.println("Name: " + player.name);
+        System.out.println("Health: " + player.health);
     }
 }
