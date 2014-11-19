@@ -32,7 +32,7 @@ public class UI
         System.out.println(creds);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Press return to continue...");
+        System.out.print("Press enter to continue...");
         scanner.nextLine();
         startScreen();
     }
@@ -45,7 +45,7 @@ public class UI
         String name;
         Scanner scan = new Scanner(System.in);
         System.out.println ("You owe $100,000 to a loan shark. You've got 30 days to earn it back by selling drugs. Start now.");
-        System.out.print("What is your name?: ");
+        System.out.print("What is your name? ");
         name = scan.nextLine();
         Game game = new Game(name);
         game.run();
@@ -108,5 +108,6 @@ public class UI
     {
         System.out.println("Name: " + player.name);
         System.out.println("Health: " + player.health);
+        System.out.println("Inventory: " + player.inventory);
     }
 }
