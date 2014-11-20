@@ -1,6 +1,6 @@
 package com.tufsd.drugwars;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 
 /**
  * A class to represent players.
@@ -13,7 +13,7 @@ public class Player
     /**
      * The player's inventory with drug names as keys and count as values.
      */
-    public HashMap inventory;
+    public EnumMap<Drug, Integer> inventory;
 
     /**
      * The player's name.
