@@ -53,3 +53,7 @@ target
 
 # Javadoc
 doc
+
+# Cloud9
+.c9revisions
+.c9
