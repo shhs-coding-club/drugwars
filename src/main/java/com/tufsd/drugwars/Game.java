@@ -15,7 +15,7 @@ public class Game
     public Player player;
     public Game(String name)
     {
-        EnumMap<Drug, Integer> inventory = new EnumMap<>(Drug.class);
+        EnumMap<Drug, Integer> inventory = new EnumMap<Drug, Integer>(Drug.class);
         // initialise instance variables
         player = new Player(name);
         player.inventory = inventory;
