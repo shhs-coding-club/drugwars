@@ -1,5 +1,5 @@
-package com.tufsd.drugwars;
-
+ 
+import java.util.Random;
 import java.util.EnumMap;
 /**
  * A class to represent a game session.
@@ -45,5 +45,13 @@ public class Game
         UI.playerInfo(player);
     }
     
-    
+    public boolean policeEncounter ()
+    {
+        double random = Math.random() * 10 + 1;
+        if (random == 1)
+            return true;
+        else
+            return false;
+         
+    }
 }
