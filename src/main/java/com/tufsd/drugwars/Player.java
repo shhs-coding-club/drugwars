@@ -24,6 +24,8 @@ public class Player
      * The player's health (initial value of 100).
      */
     public int health = 100;
+    
+    public double debt;
 
     /**
      * Constructor for objects of class Player
@@ -42,5 +44,7 @@ public class Player
         int tiredness = 10; //get sleep
 
         int bounty = 0; //illegal things = bigger bounty
+        
+        debt = 10000;
     }
 }
