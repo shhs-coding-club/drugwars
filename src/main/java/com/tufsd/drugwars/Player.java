@@ -12,7 +12,7 @@ public class Player
     /**
      * The player's inventory with drug names as keys and count as values.
      */
-    public EnumMap<Drug, Integer> inventory;
+    public EnumMap<Drug, Integer> inv;
 
     /**
      * The player's name.
@@ -23,7 +23,7 @@ public class Player
      * The player's health (initial value of 100).
      */
     public int health = 100;
-
+    public double money;
     public double debt;
 
     /**
@@ -41,9 +41,18 @@ public class Player
         int highness = 0; //you know what it is
         int stamina = 100; //how long you run
         int tiredness = 10; //get sleep
-
+        double money = 1000; 
         int bounty = 0; //illegal things = bigger bounty
 
         debt = 10000;
+    }
+    
+    
+    public int sellDrugs(Drug drug, int quantity)
+    {
+        inv.put (drug, inv.get(drug) - quantity);
+        money += quantity*10;
+        return quantity*10;
+        
     }
 }

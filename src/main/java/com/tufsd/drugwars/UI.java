@@ -108,7 +108,7 @@ public class UI
     {
         System.out.println("Name: " + player.name);
         System.out.println("Health: " + player.health);
-        System.out.println("Inventory: " + player.inventory);
+        System.out.println("Inventory: " + player.inv);
         NumberFormat money = NumberFormat.getCurrencyInstance();
 
         System.out.println("Debt: " + money.format(player.debt));
