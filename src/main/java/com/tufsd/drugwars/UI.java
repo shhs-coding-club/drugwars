@@ -1,4 +1,4 @@
- 
+package com.tufsd.drugwars;
 import java.util.Scanner;
 import java.text.NumberFormat;
 
@@ -103,15 +103,15 @@ public class UI
 
         return opts[menuChoice-1];
     }
-    
+
     public static void playerInfo(Player player)
     {
         System.out.println("Name: " + player.name);
         System.out.println("Health: " + player.health);
         System.out.println("Inventory: " + player.inventory);
         NumberFormat money = NumberFormat.getCurrencyInstance();
-        
+
         System.out.println("Debt: " + money.format(player.debt));
-        
+
     }
 }

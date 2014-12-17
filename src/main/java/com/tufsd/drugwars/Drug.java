@@ -1,6 +1,6 @@
- 
 
 
+package com.tufsd.drugwars;
 /**
  * Class to provide a template for the various drugs
  *
@@ -13,9 +13,9 @@ public enum Drug
     METH,
     SPEED,
     COKE,
-    HEROIN
-    
-    
+    HEROIN;
+
+
     /*// instance variables - replace the example below with your own
     public String name;
     public double basePrice;
