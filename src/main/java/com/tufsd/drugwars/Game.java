@@ -27,8 +27,9 @@ public class Game
         EnumMap<Drug, Integer> inventory = new EnumMap<Drug, Integer>(Drug.class);
         // initialise instance variables
         player = new Player(name);
-        player.inventory = inventory;
-        player.inventory.put(Drug.POT, 3);
+        player.inv = inventory;
+        player.inv.put(Drug.POT, 3);
+        player.sellDrugs (Drug.POT, 2);
 
         turns = 0;
 
