@@ -1,20 +1,23 @@
- 
-
-
+package com.tufsd.drugwars;
+import java.util.EnumMap;
 /**
  * location class
  *
  * @author Aaron
  * @version 10-29-14
  */
-public class Location
+public enum Location
 {
-    public String name;
-    public float[] prices;
+    BLOCK,
+    KOREANCHURCH,
+    MCDONALDS,
+    BOX;
 
-    public Location(String name, float[] prices)
+    public String name;
+    public EnumMap<Drug, Double> prices;
+
+    Location()
     {
-        this.name = name;
-        this.prices = prices;
+        prices = new EnumMap<Drug, Double>(Drug.class);
     }
 }
