@@ -16,7 +16,9 @@ public class Game
 
     public final double RATE = .1;
     public int turns;
-
+    
+    Location currentLocation;
+    
     public void turn()
     {
         addInterest();
@@ -46,7 +48,7 @@ public class Game
         initPrices();
         UI.playerInfo(player);
     }
-
+     
     public boolean policeEncounter ()
     {
         double random = Math.random() * 10 + 1;
@@ -62,4 +64,12 @@ public class Game
         Location.BLOCK.prices.put(Drug.POT, 10.0);
         System.out.println(Location.BLOCK.prices);
     }
+    
+    public void setLocation (Location newLocation)
+    {
+        currentLocation = newLocation;
+        
+        turns += 1;
+    }
+    
 }
