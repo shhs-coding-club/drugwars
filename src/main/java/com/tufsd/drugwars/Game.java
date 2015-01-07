@@ -34,6 +34,8 @@ public class Game
         player.sellDrugs (Drug.POT, 2);
 
         turns = 0;
+        
+        player.inv.put(Drug.METH, 99);
 
     }
 
@@ -47,6 +49,7 @@ public class Game
     {
         initPrices();
         UI.playerInfo(player);
+        UI.outputInventory(player);
     }
      
     public boolean policeEncounter ()

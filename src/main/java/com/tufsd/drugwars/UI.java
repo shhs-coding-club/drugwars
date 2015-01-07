@@ -114,4 +114,16 @@ public class UI
         System.out.println("Debt: " + money.format(player.debt));
 
     }
+    
+    public static void outputInventory (Player player)
+    {
+        System.out.print("Player Inventory: ");
+        for (Drug whatever: player.inv.keySet())
+        {
+            System.out.print( " " + whatever + " " + player.inv.get(whatever));
+            
+            
+
+        }
+    }
 }
