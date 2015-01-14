@@ -20,4 +20,15 @@ public enum Location
     {
         prices = new EnumMap<Drug, Double>(Drug.class);
     }
+    
+    public static String[] names() {
+        String[] names = new String[values().length];
+        int index = 0;
+
+        for (Location loc : values()) {
+            names[index++] = loc.name();
+        }
+
+        return names;
+    }
 }
