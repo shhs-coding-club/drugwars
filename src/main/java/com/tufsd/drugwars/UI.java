@@ -4,7 +4,7 @@ import java.text.NumberFormat;
 
 /**
  * Drug Wars interface
- * @author Drug Lords Abigail, Amanda, Daniel, Dong Kyu, Jack, Jason (Team BADASSNESS!!!!!!)
+ * @author Drug Lords Abigail (Team BADASSNESS!!!!!!)
  *
  *
  */
@@ -126,4 +126,16 @@ public class UI
 
         }
     }
+    
+    public static String locationMenu(String[] new1)
+    {
+        new1 = Location.names();
+        //String result = Location.valueOf(new1);
+        
+        return null;
+       
+    }
+    
+
 }
+   
