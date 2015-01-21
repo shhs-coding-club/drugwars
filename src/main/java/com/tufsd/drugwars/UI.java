@@ -93,7 +93,7 @@ public class UI
     {
         Scanner menuScanner = new Scanner (System.in);
         int menuChoice;
-
+        System.out.println();
         for (int i = 0; i < opts.length; i++)
         {
             System.out.println((i+1)+". "+opts[i]);
@@ -127,13 +127,12 @@ public class UI
         }
     }
     
-    public static String locationMenu(String[] new1)
+    public static Location locationMenu()
     {
-        new1 = Location.names();
+       String[] new1 = Location.names();
         //String result = Location.valueOf(new1);
-        
-        return null;
-       
+       String val = menuGen(new1);
+       return Location.valueOf(val);
     }
     
 
