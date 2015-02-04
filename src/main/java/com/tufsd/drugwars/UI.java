@@ -1,5 +1,6 @@
 package com.tufsd.drugwars;
 import java.util.Scanner;
+import java.util.Set;
 import java.text.NumberFormat;
 
 /**
@@ -133,6 +134,22 @@ public class UI
         //String result = Location.valueOf(new1);
        String val = menuGen(new1);
        return Location.valueOf(val);
+    }
+    
+    public static Drug drugMenu(Player player)
+    {
+        Set<Drug> myset = player.inv.keySet();
+        String[] new1 = new String[myset.size()];
+        int i = 0;
+        for(Drug drug : myset)
+        {
+            System.out.println(drug);
+            new1[i] = drug.toString();
+            i++;
+        }
+        //String[] new1 = myset.toArray(new String[myset.size()]);
+        String val = menuGen(new1);
+        return Drug.valueOf(val);
     }
 }
    

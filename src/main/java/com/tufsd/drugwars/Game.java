@@ -51,6 +51,7 @@ public class Game
         UI.playerInfo(player);
         UI.outputInventory(player);
         System.out.println(UI.locationMenu());
+        System.out.println(UI.drugMenu(player));
     }
      
     public boolean policeEncounter ()
