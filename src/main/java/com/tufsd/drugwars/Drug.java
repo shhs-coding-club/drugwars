@@ -15,19 +15,14 @@ public enum Drug
     COKE,
     HEROIN;
 
+    public static String[] names() {
+        String[] names = new String[values().length];
+        int index = 0;
 
-    /*// instance variables - replace the example below with your own
-    public String name;
-    public double basePrice;
-    /**
-     * Constructor for objects of class Drug
-     * @param name      name of the drug
-     * @param basePrice the base price of the drug
-     *
-    public Drug(String name, double basePrice)
-    {
-        // initialise instance variables
-        this.name = name;
-        this.basePrice = basePrice;
-    }*/
+        for (Drug drug : values()) {
+            names[index++] = drug.name();
+        }
+
+        return names;
+    }
 }

@@ -134,7 +134,5 @@ public class UI
        String val = menuGen(new1);
        return Location.valueOf(val);
     }
-    
-
 }
    
