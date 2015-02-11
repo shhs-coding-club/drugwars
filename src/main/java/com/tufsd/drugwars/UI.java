@@ -45,7 +45,7 @@ public class UI
     {
         String name;
         Scanner scan = new Scanner(System.in);
-        System.out.println ("You owe $100,000 to a loan shark. You've got 30 days to earn it back by selling drugs. Start now.");
+        System.out.println ("You owe $10,000 to a loan shark. You've got 30 days to earn it back by selling drugs. Start now.");
         System.out.print("What is your name? ");
         name = scan.nextLine();
         Game game = new Game(name);
@@ -85,7 +85,7 @@ public class UI
     }
 
     /**
-     * Generates a menu for uesrs from an array.
+     * Generates a menu for users from an array.
      *
      * @param opts an array of Strings containing menu options
      * @return the string value of the selected menu option
@@ -151,5 +151,25 @@ public class UI
         String val = menuGen(new1);
         return Drug.valueOf(val);
     }
+    
+    public static void gameMenu(Player player)
+    {
+        String[] options ={"Location", "BuySell"};
+        
+        String val = menuGen(options);
+        
+        if(val.equals("Location"))
+        {
+            locationMenu();
+        }
+        else if(val.equals("BuySell"))
+        {
+            drugMenu(player);
+        }
+        
+    }
+  
+    
+ 
 }
    
