@@ -9,11 +9,18 @@ package com.tufsd.drugwars;
  */
 public enum Drug
 {
-    POT,
-    METH,
-    SPEED,
-    COKE,
-    HEROIN;
+    POT (10),
+    METH (15),
+    SPEED (12),
+    COKE (20),
+    HEROIN (8);
+    
+    double price;
+    
+    Drug(double price)
+    {
+        this.price = price;
+    }
 
     public static String[] names() {
         String[] names = new String[values().length];
