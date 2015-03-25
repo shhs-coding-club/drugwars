@@ -30,12 +30,12 @@ public class Game
         // initialise instance variables
         player = new Player(name);
         player.inv = inventory;
-        player.inv.put(Drug.POT, 3);
-        player.sellDrugs (Drug.POT, 2);
+        player.inv.put(Drug.REEFER, 3);
+        player.sellDrugs (Drug.REEFER, 2);
 
         turns = 0;
         
-        player.inv.put(Drug.METH, 99);
+        player.inv.put(Drug.XANAX, 99);
 
     }
 
@@ -65,27 +65,27 @@ public class Game
 
     private void initPrices()
     {
-        Location.BLOCK.prices.put(Drug.POT, -1.0);
-        Location.BLOCK.prices.put(Drug.METH, 20.0);
-        Location.BLOCK.prices.put(Drug.SPEED, 7.0);
+        Location.BLOCK.prices.put(Drug.REEFER, -1.0);
+        Location.BLOCK.prices.put(Drug.XANAX, 20.0);
+        Location.BLOCK.prices.put(Drug.ADDERALL, 7.0);
         Location.BLOCK.prices.put(Drug.COKE, 5.0);
         Location.BLOCK.prices.put(Drug.HEROIN, 10.0);
         
-        Location.MCDONALDS.prices.put(Drug.POT, 5.0);
-        Location.MCDONALDS.prices.put(Drug.METH, -2.0);
-        Location.MCDONALDS.prices.put(Drug.SPEED, 4.0);
+        Location.MCDONALDS.prices.put(Drug.REEFER, 5.0);
+        Location.MCDONALDS.prices.put(Drug.XANAX, -2.0);
+        Location.MCDONALDS.prices.put(Drug.ADDERALL, 4.0);
         Location.MCDONALDS.prices.put(Drug.COKE, 10.0);
         Location.MCDONALDS.prices.put(Drug.HEROIN, 10.0);
         
-        Location.KOREANCHURCH.prices.put(Drug.POT, -8.0);
-        Location.KOREANCHURCH.prices.put(Drug.METH, 12.0);
-        Location.KOREANCHURCH.prices.put(Drug.SPEED, 4.0);
+        Location.KOREANCHURCH.prices.put(Drug.REEFER, -8.0);
+        Location.KOREANCHURCH.prices.put(Drug.XANAX, 12.0);
+        Location.KOREANCHURCH.prices.put(Drug.ADDERALL, 4.0);
         Location.KOREANCHURCH.prices.put(Drug.COKE, 6.0);
         Location.KOREANCHURCH.prices.put(Drug.HEROIN, 8.0);
         
-        Location.BOX.prices.put(Drug.POT, 13.0);
-        Location.BOX.prices.put(Drug.METH, 20.0);
-        Location.BOX.prices.put(Drug.SPEED, 400.0);
+        Location.BOX.prices.put(Drug.REEFER, 13.0);
+        Location.BOX.prices.put(Drug.XANAX, 20.0);
+        Location.BOX.prices.put(Drug.ADDERALL, 400.0);
         Location.BOX.prices.put(Drug.COKE, 30.0);
         Location.BOX.prices.put(Drug.HEROIN, 10.0);
     }
