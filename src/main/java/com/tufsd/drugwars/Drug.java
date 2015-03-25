@@ -9,9 +9,9 @@ package com.tufsd.drugwars;
  */
 public enum Drug
 {
-    POT (10),
-    METH (15),
-    SPEED (12),
+    REEFER (10),
+    XANAX (15),
+    ADDERALL (12),
     COKE (20),
     HEROIN (8);
     
