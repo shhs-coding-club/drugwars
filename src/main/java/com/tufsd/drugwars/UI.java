@@ -113,6 +113,7 @@ public class UI
         NumberFormat money = NumberFormat.getCurrencyInstance();
 
         System.out.println("Debt: " + money.format(player.debt));
+        System.out.println("Cash: " + money.format(player.money));
 
     }
     
@@ -152,7 +153,20 @@ public class UI
         return Drug.valueOf(val);
     }
     
-    public static void gameMenu(Player player)
+    public static int qtyMenu(Drug d, int max)
+    {
+        System.out.print("How many " + d + " would you like to sell? [0-" + max + "]: ");
+        Scanner scan = new Scanner(System.in);
+        int qty = scan.nextInt();
+        if(qty >= 0 && qty <= max)
+        {
+            return qty;
+        }
+        
+        return 0;
+    }
+    
+    public static void gameMenu(Player player, Location loc)
     {
         String[] options ={"Location", "BuySell"};
         
@@ -164,7 +178,12 @@ public class UI
         }
         else if(val.equals("BuySell"))
         {
-            drugMenu(player);
+            // Arbitrarily assumes selling atm, so will be fixed later
+            Drug d = drugMenu(player);
+            int max = player.inv.get(d);
+            int num = qtyMenu(d, max);
+            player.sellDrugs(d, num, loc);
+            playerInfo(player);
         }
         
     }

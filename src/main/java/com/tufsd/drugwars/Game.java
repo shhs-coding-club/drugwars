@@ -26,12 +26,15 @@ public class Game
 
     public Game(String name)
     {
+        currentLocation = Location.BLOCK;
+        initPrices();
         EnumMap<Drug, Integer> inventory = new EnumMap<Drug, Integer>(Drug.class);
         // initialise instance variables
         player = new Player(name);
+        System.out.println(player.money);
         player.inv = inventory;
         player.inv.put(Drug.REEFER, 3);
-        player.sellDrugs (Drug.REEFER, 2);
+        player.sellDrugs (Drug.REEFER, 2, currentLocation);
 
         turns = 0;
         
@@ -50,7 +53,7 @@ public class Game
         initPrices();
         UI.playerInfo(player);
         UI.outputInventory(player);
-        UI.gameMenu(player);
+        UI.gameMenu(player, currentLocation);
     }
      
     public boolean policeEncounter ()
