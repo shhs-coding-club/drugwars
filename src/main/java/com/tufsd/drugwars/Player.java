@@ -41,18 +41,18 @@ public class Player
         int highness = 0; //you know what it is
         int stamina = 100; //how long you run
         int tiredness = 10; //get sleep
-        double money = 1000; 
+        money = 1000; 
         int bounty = 0; //illegal things = bigger bounty
 
         debt = 10000;
     }
     
     
-    public int sellDrugs(Drug drug, int quantity)
+    public double sellDrugs(Drug drug, int quantity, Location loc)
     {
         inv.put (drug, inv.get(drug) - quantity);
-        money += quantity*10;
-        return quantity*10;
+        money += quantity*(drug.price + loc.prices.get(drug));
+        return quantity*(drug.price + loc.prices.get(drug));
         
     }
 }
