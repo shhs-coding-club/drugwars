@@ -1,7 +1,9 @@
-package com.tufsd.drugwars;
+package src.main.java.com.tufsd.drugwars;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.HashSet;
 import java.text.NumberFormat;
+import java.util.Arrays;
 
 /**
  * Drug Wars interface
@@ -137,9 +139,9 @@ public class UI
        return Location.valueOf(val);
     }
     
-    public static Drug drugMenu(Player player)
+    public static Drug drugMenu(Set<Drug> myset)
     {
-        Set<Drug> myset = player.inv.keySet();
+        //Set<Drug> myset = player.inv.keySet();
         String[] new1 = new String[myset.size()];
         int i = 0;
         for(Drug drug : myset)
@@ -168,7 +170,7 @@ public class UI
     
     public static void gameMenu(Player player, Location loc)
     {
-        String[] options ={"Location", "BuySell"};
+        String[] options ={"Location", "Buy", "Sell"};
         
         String val = menuGen(options);
         
@@ -176,16 +178,25 @@ public class UI
         {
             locationMenu();
         }
-        else if(val.equals("BuySell"))
+        else if(val.equals("Sell"))
         {
             // Arbitrarily assumes selling atm, so will be fixed later
-            Drug d = drugMenu(player);
+            Drug d = drugMenu(player.inv.keySet());
             int max = player.inv.get(d);
             int num = qtyMenu(d, max);
             player.sellDrugs(d, num, loc);
             playerInfo(player);
         }
-        
+        else if(val.equals("Buy"))
+        {
+            Drug d = drugMenu(new HashSet<Drug>(Arrays.asList(Drug.values())));
+            System.out.println(d);
+            int max = (int)(player.money / (d.price + loc.prices.get(d)));
+            int num = qtyMenu(d, max);
+            player.buyDrugs(d, num, loc);
+            playerInfo(player);
+            
+        }
     }
   
     

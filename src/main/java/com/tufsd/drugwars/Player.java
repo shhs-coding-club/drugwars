@@ -1,4 +1,4 @@
-package com.tufsd.drugwars;
+package src.main.java.com.tufsd.drugwars;
 import java.util.EnumMap;
 
 /**
@@ -52,6 +52,23 @@ public class Player
     {
         inv.put (drug, inv.get(drug) - quantity);
         money += quantity*(drug.price + loc.prices.get(drug));
+        return quantity*(drug.price + loc.prices.get(drug));
+        
+    }
+    public double buyDrugs(Drug drug, int quantity, Location loc)
+    {
+        System.out.println(drug);
+        int cur;
+        try
+        {
+            cur = inv.get(drug);
+        }
+        catch (NullPointerException e)
+        {
+            cur = 0;
+        }
+        inv.put (drug, inv.get(drug) + quantity);
+        money -= quantity*(drug.price + loc.prices.get(drug));
         return quantity*(drug.price + loc.prices.get(drug));
         
     }
