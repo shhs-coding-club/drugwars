@@ -1,4 +1,4 @@
-package com.tufsd.drugwars;
+package src.test.java.com.tufsd.drugwars;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
