@@ -1,4 +1,4 @@
-package src.main.java.com.tufsd.drugwars;
+package com.tufsd.drugwars;
 import java.util.Random;
 import java.util.EnumMap;
 /**

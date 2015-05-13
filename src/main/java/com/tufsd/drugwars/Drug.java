@@ -1,6 +1,6 @@
 
 
-package src.main.java.com.tufsd.drugwars;
+package com.tufsd.drugwars;
 /**
  * Class to provide a template for the various drugs
  *
