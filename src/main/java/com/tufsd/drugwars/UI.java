@@ -1,4 +1,4 @@
-package src.main.java.com.tufsd.drugwars;
+package com.tufsd.drugwars;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.HashSet;
@@ -135,14 +135,24 @@ public class UI
     {
        String[] new1 = Location.names();
         //String result = Location.valueOf(new1);
-       String val = menuGen(new1);
-       return Location.valueOf(val);
+       String[] new2 = new String[new1.length];
+       for (int i=0; i<new1.length; i++)
+       {
+           new2[i]= new1[i];
+        }
+      new2[new2.length-1] = "cancel";
+      String val = menuGen(new2);
+    
+     if (val.equals("cancel"))
+        return null;
+     else 
+         return Location.valueOf(val);
     }
     
     public static Drug drugMenu(Set<Drug> myset)
     {
         //Set<Drug> myset = player.inv.keySet();
-        String[] new1 = new String[myset.size()];
+        String[] new1 = new String[myset.size()+1];
         int i = 0;
         for(Drug drug : myset)
         {
@@ -150,9 +160,14 @@ public class UI
             new1[i] = drug.toString();
             i++;
         }
+        new1[myset.size()]= "cancel";
         //String[] new1 = myset.toArray(new String[myset.size()]);
         String val = menuGen(new1);
-        return Drug.valueOf(val);
+        if (val.equals("cancel"))
+            return null;
+        else 
+            
+            return Drug.valueOf(val);
     }
     
     public static int qtyMenu(Drug d, int max)
@@ -182,24 +197,32 @@ public class UI
         {
             // Arbitrarily assumes selling atm, so will be fixed later
             Drug d = drugMenu(player.inv.keySet());
+            if (d != null)
+            {
             int max = player.inv.get(d);
             int num = qtyMenu(d, max);
             player.sellDrugs(d, num, loc);
-            playerInfo(player);
+           
+            }
+         playerInfo(player);
         }
+        
         else if(val.equals("Buy"))
         {
             Drug d = drugMenu(new HashSet<Drug>(Arrays.asList(Drug.values())));
+            if (d != null)
+                {
             System.out.println(d);
             int max = (int)(player.money / (d.price + loc.prices.get(d)));
             int num = qtyMenu(d, max);
             player.buyDrugs(d, num, loc);
+         }
             playerInfo(player);
-            
         }
+       }
     }
   
     
  
-}
+
    
