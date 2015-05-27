@@ -53,7 +53,7 @@ public class Game
         initPrices();
         UI.playerInfo(player);
         UI.outputInventory(player);
-        UI.gameMenu(player, currentLocation);
+        UI.gameMenu(player, currentLocation, this);
     }
      
     public boolean policeEncounter ()
@@ -99,5 +99,6 @@ public class Game
         
         turns += 1;
     }
+    
     
 }
