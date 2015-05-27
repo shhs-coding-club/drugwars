@@ -116,6 +116,7 @@ public class UI
 
         System.out.println("Debt: " + money.format(player.debt));
         System.out.println("Cash: " + money.format(player.money));
+        System.out.println();
 
     }
     
@@ -185,6 +186,7 @@ public class UI
     
     public static void gameMenu(Player player, Location loc, Game g)
     {
+        System.out.println("Game Turn " + (g.turns + 1));
         String[] options ={"Location", "Buy", "Sell"};
         
         String val = menuGen(options);
