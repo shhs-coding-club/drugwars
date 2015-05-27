@@ -183,7 +183,7 @@ public class UI
         return 0;
     }
     
-    public static void gameMenu(Player player, Location loc)
+    public static void gameMenu(Player player, Location loc, Game g)
     {
         String[] options ={"Location", "Buy", "Sell"};
         
@@ -191,7 +191,12 @@ public class UI
         
         if(val.equals("Location"))
         {
-            locationMenu();
+            Location l = locationMenu();
+            if (l != null)
+            {
+                g.setLocation(l);
+                System.out.println(l);
+            }   
         }
         else if(val.equals("Sell"))
         {
@@ -199,9 +204,9 @@ public class UI
             Drug d = drugMenu(player.inv.keySet());
             if (d != null)
             {
-            int max = player.inv.get(d);
-            int num = qtyMenu(d, max);
-            player.sellDrugs(d, num, loc);
+                int max = player.inv.get(d);
+                int num = qtyMenu(d, max);
+                player.sellDrugs(d, num, loc);
            
             }
          playerInfo(player);

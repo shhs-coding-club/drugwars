@@ -25,6 +25,7 @@ public class Player
     public int health = 100;
     public double money;
     public double debt;
+    
 
     /**
      * Constructor for objects of class Player
@@ -80,5 +81,5 @@ public class Player
         else 
             return 0;
     }
-    }
+}
 
