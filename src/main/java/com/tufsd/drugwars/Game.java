@@ -51,9 +51,7 @@ public class Game
     public void run()
     {
         initPrices();
-        UI.playerInfo(player);
-        UI.outputInventory(player);
-        UI.gameMenu(player, currentLocation, this);
+        gameLoop();
     }
      
     public boolean policeEncounter ()
@@ -98,6 +96,18 @@ public class Game
         currentLocation = newLocation;
         
         turns += 1;
+    }
+    
+    public void gameLoop()
+    {
+        while(turns < 30)
+        {
+            UI.playerInfo(player);
+            System.out.println(currentLocation);
+            UI.gameMenu(player, currentLocation, this);
+        }
+        System.out.println();
+        System.out.println("Thank you for playing!");
     }
     
     
