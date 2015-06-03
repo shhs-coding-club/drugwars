@@ -18,11 +18,6 @@ public class Game
     public int turns;
     
     Location currentLocation;
-    
-    public void turn()
-    {
-        addInterest();
-    }
 
     public Game(String name)
     {
@@ -31,15 +26,9 @@ public class Game
         EnumMap<Drug, Integer> inventory = new EnumMap<Drug, Integer>(Drug.class);
         // initialise instance variables
         player = new Player(name);
-        System.out.println(player.money);
         player.inv = inventory;
-        player.inv.put(Drug.REEFER, 3);
-        player.sellDrugs (Drug.REEFER, 2, currentLocation);
 
         turns = 0;
-        
-        player.inv.put(Drug.XANAX, 99);
-
     }
 
     public double addInterest()
@@ -102,11 +91,16 @@ public class Game
     {
         while(turns < 30)
         {
+            addInterest();
             UI.playerInfo(player);
             System.out.println(currentLocation);
             UI.gameMenu(player, currentLocation, this);
         }
         System.out.println();
+        if(player.money >= player.debt)
+            System.out.println("You win!");
+        else
+            System.out.println("You got whacked!");
         System.out.println("Thank you for playing!");
     }
     

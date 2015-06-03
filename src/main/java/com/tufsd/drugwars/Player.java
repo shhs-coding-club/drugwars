@@ -53,6 +53,10 @@ public class Player
     {
         if (drug != null)
            { inv.put (drug, inv.get(drug) - quantity);
+            if(inv.get(drug) <= 0)
+            {
+                inv.remove(drug);
+            }
             money += quantity*(drug.price + loc.prices.get(drug));
             return quantity*(drug.price + loc.prices.get(drug));
         }
@@ -61,7 +65,6 @@ public class Player
     }
     public double buyDrugs(Drug drug, int quantity, Location loc)
     {
-        System.out.println(drug);
         int cur;
         try
         {
@@ -74,7 +77,7 @@ public class Player
         
         if (drug != null)
         {
-            inv.put (drug, inv.get(drug) + quantity);
+            inv.put (drug, cur + quantity);
             money -= quantity*(drug.price + loc.prices.get(drug));
             return quantity*(drug.price + loc.prices.get(drug));
         }
